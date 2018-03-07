@@ -21,17 +21,17 @@ $(document).ready(function () {
         var time = moment($("#firstTrain").val().trim(), "HH:mm").subtract(10, "years").format("X");;
         var frequency = $("#frequency").val().trim();
 
-        database.ref().set({
+        database.ref().push({
             name: trainName,
             destination: destination,
             time: time,
-            frquency: frequency,
+            frequency: frequency,
         });
 
-        console.log(trainName);
-        console.log(destination);
-        console.log(time);
-        console.log(frequency);
+        // console.log(trainName);
+        // console.log(destination);
+        // console.log(time);
+        // console.log(frequency);
 
         $("#nameInput").val("");
         $("#placeInput").val("");
@@ -40,6 +40,17 @@ $(document).ready(function () {
 
         return false;
 
+    });
+
+    database.ref().on("child_added", function (childSnapshot, prevChildKey) {
+        console.log(childSnapshot.val());
+
+        var firebaseName = childSnapshot.val().name;
+        var firebaseDestination = childSnapshot.val().destination;
+        var firebaseTime = childSnapshot.val().time;
+        var firebaseFrequency = childSnapshot.val().frequency;
+
+        $("#trainTable" > "tbody").append("<tr><td>" + firebaseName + "</td><td>" + firebaseDestination + "</td><td>" + firebaseTime + "</td><td>" + firebaseFrequency + "</td></tr>");
     });
 
 });
