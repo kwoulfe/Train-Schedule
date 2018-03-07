@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <title>Train Schedule</title>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
@@ -15,6 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 
@@ -40,20 +40,20 @@
                     <div class="panel-body">
                         <form>
                             <div class="form-group">
-                                <label for="formGroupExampleInput">Train Name</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cali Express">
+                                <label for="nameInput">Train Name</label>
+                                <input type="text" class="form-control" id="nameInput" placeholder="Cali Express">
                             </div>
                             <div class="form-group">
-                                <label for="formGroupExampleInput2">Destination</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Sacramento">
+                                <label for="placeInput">Destination</label>
+                                <input type="text" class="form-control" id="placeInput" placeholder="Sacramento">
                             </div>
                             <div class="form-group">
-                                <label for="formGroupExampleInput3">First Train Time</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="14:45 PM">
+                                <label for="firstTrain">First Train Time</label>
+                                <input type="text" class="form-control" id="firstTrain" placeholder="14:45 PM">
                             </div>
                             <div class="form-group">
-                                <label for="formGroupExampleInput4">Frequency (Minutes)</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="15">
+                                <label for="frequency">Frequency (Minutes)</label>
+                                <input type="text" class="form-control" id="frequency" placeholder="15">
                             </div>
                             <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
                         </form>
@@ -86,22 +86,6 @@
             </div>
         </div>
     </div>
-
-
-    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCeG6zY4XN32mKKSPIF0JCMv1UyKZOCe08",
-            authDomain: "train-schedule-1a18e.firebaseapp.com",
-            databaseURL: "https://train-schedule-1a18e.firebaseio.com",
-            projectId: "train-schedule-1a18e",
-            storageBucket: "train-schedule-1a18e.appspot.com",
-            messagingSenderId: "348423046700"
-        };
-        firebase.initializeApp(config);
-    </script>
-
     <script type="text/javascript " src="assets/app.js "></script>
 </body>
 
