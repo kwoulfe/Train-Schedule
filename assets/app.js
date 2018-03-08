@@ -84,6 +84,9 @@ $(document).ready(function() {
         minutes +
         '</td></tr>'
     );
+    $('#update').click(function() {
+      location.reload();
+    });
   });
 });
 
