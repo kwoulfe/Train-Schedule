@@ -1,0 +1,76 @@
+body {
+  background: url(https://github.com/kwoulfe/Train-Schedule/blob/master/images/pexels-photo-358167.jpeg?raw=true)
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  color: white;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.my-2 {
+  border-top-color: white;
+}
+
+.panel {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.panel-title {
+  font-family: 'Architects Daughter', cursive;
+}
+
+#trainTable {
+  font-family: 'Architects Daughter', cursive;
+  font: bold;
+  font-size: 1.25rem;
+}
+
+.table {
+  border-top-color: transparent;
+  background-color: white;
+  color: black;
+}
+
+.btn {
+  background-color: transparent;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.5rem;
+  border-color: white;
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.btn:active {
+  background: transparent;
+  border-color: white;
+}
+
+.btn:focus {
+  background: transparent;
+  border-color: white;
+}
+
+#form {
+  font-family: 'Architects Daughter', cursive;
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control {
+  text-align: center;
+}
